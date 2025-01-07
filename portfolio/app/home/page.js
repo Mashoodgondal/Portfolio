@@ -12,7 +12,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
+//  import  img1 = ""
 export default function Hom() {
     const [text, setText] = useState('');
     const fullText = "A  Passionate Web Developer";
@@ -47,7 +47,7 @@ export default function Hom() {
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center">
                 <Image
-                    src="/profile.jpg"
+                    src="/public/images/123.jpg"
                     alt="Profile Picture"
                     width={400}
                     height={400}
