@@ -1,12 +1,14 @@
-import Hom from "./home/page";
+// import H from "./home/page";
 // import Hero from "./home/page";
+
+import Hero from "./home/page";
 
 
 export default function Home() {
   return (
     <>
       {/* <Hero /> */}
-      <Hom />
+      <Hero />
     </>
   );
 }
