@@ -12,12 +12,12 @@ const NaveBar = () => {
     };
     return (
         <div>
-            <nav className=" sticky bg-gray-300 shadow-lg shadow-gray-400 dark:bg-gray-100">
+            <nav className=" sticky  shadow-sm ">
                 <div className="max-w-screen-xl flex justify-between px-4 py-3 mx-auto">
                     <div>
-                        <a href="#" className="text-yellow-500 text-3xl font-bold">
+                        <a href="#" className="text-yellow-600 text-3xl font-bold">
                             Port<span className="text-indigo-600">folio</span>
-                            <span className="text-yellow-500 text-4xl">.</span>
+                            <span className="text-yellow-600 text-4xl">.</span>
                         </a>
                     </div>
 
@@ -26,7 +26,7 @@ const NaveBar = () => {
                             <li>
                                 <a
                                     href="/"
-                                    className="text-gray-900 hover:text-yellow-600 hover:border-b hover:border-yellow-600"
+                                    className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                     aria-current="page"
                                 >
                                     HOME
@@ -35,43 +35,28 @@ const NaveBar = () => {
                             <li>
                                 <a
                                     href="/"
-                                    className="text-gray-900 hover:text-yellow-600 hover:border-b hover:border-yellow-600"
+                                    className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                 >
-                                    COMPANY
+                                    ABOUT
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="/"
-                                    className="text-gray-900 hover:text-yellow-600 hover:border-b hover:border-yellow-600"
+                                    className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                 >
-                                    TEAM
+                                    PROJECTS
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="/"
-                                    className="text-gray-900 hover:text-yellow-600 hover:border-b hover:border-yellow-600"
+                                    className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                 >
-                                    FEATURES
+                                    Contect
                                 </a>
                             </li>
-                            <li>
-                                <a
-                                    href="/"
-                                    className="text-gray-900 hover:text-yellow-600 hover:border-b hover:border-yellow-600"
-                                >
-                                    BLOG
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="text-gray-900 hover:text-yellow-600 hover:border-b hover:border-yellow-600"
-                                >
-                                    HOT OFFERS
-                                </a>
-                            </li>
+
                         </ul>
                         <div onClick={handleNave} className="md:hidden cursor-pointer">
                             <IoMdMenu size={25} />
@@ -115,7 +100,7 @@ const NaveBar = () => {
                                 href="#"
                                 className="text-gray-900 hover:text-blue-600  "
                             >
-                                Company
+                                ABOUT
                             </a>
                         </li>
                         <li>
@@ -123,7 +108,7 @@ const NaveBar = () => {
                                 href="#"
                                 className="text-gray-900 hover:text-blue-600   "
                             >
-                                Team
+                                PROJECTS
                             </a>
                         </li>
                         <li>
@@ -131,25 +116,10 @@ const NaveBar = () => {
                                 href="#"
                                 className="text-gray-900 hover:text-blue-600  "
                             >
-                                Features
+                                CONTECT
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-gray-900 hover:text-blue-600  "
-                            >
-                                Blogs
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-gray-900 hover:text-blue-600  "
-                            >
-                                HOT OFFERS
-                            </a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
