@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className='flex  item-center justify-center grid grid-cols-1 md:grid-cols-2 gap-4 p-4 lg:p-20'>
 
-            <div className='relative w-[300px] h-[400px]  md:w-[400px] md:h-[500px] '>
+            <div className='relative w-[300px] h-[400px]  md:w-[400px] md:h-[500px] mx-auto'>
                 <Image
                     src={img}
                     layout='fill'
