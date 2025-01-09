@@ -58,39 +58,44 @@ const NaveBar = () => {
                             </li>
 
                         </ul>
-                        <div onClick={handleNave} className="md:hidden cursor-pointer">
+                        {!nav ? (<div onClick={handleNave} className="md:hidden cursor-pointer">
                             <IoMdMenu size={25} />
-                        </div>
+                        </div>) : (<div
+                            onClick={handleNave}
+                            className=" rounded-full md:hidden  cursor-pointer"
+                        >
+                            <RiCloseCircleFill size={35} />
+                        </div>)}
                     </div>
                 </div>
             </nav>
             {/* MOBILE Nave */}
-            <div className={`${nav && "md:hidden p-6 bg-white w-full"}`}>
+            <div className={`${nav && "md:hidden p-6 w-1/2"}`}>
                 <div
                     className={`${nav
-                        ? " w-[80%] sm:w-[70%] md:w-[85%]  p-10 ease-in duration-500"
+                        ? " w-[80%] sm:w-[70%] md:w-[85%]   ease-in duration-500"
                         : "fixed left-[-100%] p-10 ease-in duration-1000"
                         }`}
                 >
-                    <div className=" p-8 border-b border-green-300   flex item-center justify-between">
-                        <div>
+                    {/* <div className=" p-8    flex item-center justify-between"> */}
+                    {/* <div>
                             <a href="#" className="text-yellow-500 text-3xl font-bold">
                                 Port<span className="text-indigo-600">folio</span>
                                 <span className="text-yellow-500 text-4xl">.</span>
                             </a>
-                        </div>
-                        <div
+                        </div> */}
+                    {/* <div
                             onClick={handleNave}
                             className=" rounded-full  cursor-pointer"
                         >
                             <RiCloseCircleFill size={35} />
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
                     <ul className="flex flex-col uppercase space-y-2 mt-6 font-bold text-gray-600 ml-8 ">
                         <li>
                             <a
                                 href="#"
-                                className="text-gray-900 hover:text-blue-600  "
+                                className="text-indigo-600 hover:text-yellow-600 hover:border-b hover:border-yellow-500  "
                             >
                                 Home
                             </a>
@@ -98,7 +103,7 @@ const NaveBar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-gray-900 hover:text-blue-600  "
+                                className="text-indigo-600 hover:text-yellow-600 hover:border-b hover:border-yellow-500  "
                             >
                                 ABOUT
                             </a>
@@ -106,7 +111,7 @@ const NaveBar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-gray-900 hover:text-blue-600   "
+                                className="text-indigo-600 hover:text-yellow-600 hover:border-b hover:border-yellow-500   "
                             >
                                 PROJECTS
                             </a>
@@ -114,7 +119,7 @@ const NaveBar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-gray-900 hover:text-blue-600  "
+                                className="text-indigo-600 hover:text-yellow-600 hover:border-b hover:border-yellow-500  "
                             >
                                 CONTECT
                             </a>

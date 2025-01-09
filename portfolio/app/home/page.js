@@ -42,7 +42,7 @@ export default function Hero() {
                         alt="Profile Picture"
                         layout="fill"
                         objectFit="cover"
-                        className="rounded-full shadow-2xl border-4 border-blue-800"
+                        className="rounded-full shadow-2xl border-[4px] border-blue-800"
                     />
                 </div>
             </div>
