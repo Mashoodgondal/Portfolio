@@ -30,11 +30,7 @@ const About = () => {
                 <li>FullStack Developer</li>
             </ul>
         ),
-        // hobbies: (
-        //     <p className="text-gray-800">
-        //         <strong>Hobbies:</strong> Exploring new tech, contributing to open-source, solving coding challenges, and enjoying a good cup of coffee.
-        //     </p>
-        // ),
+
     };
 
     return (
@@ -66,25 +62,19 @@ const About = () => {
                     <div className="flex justify-center gap-4 mb-4">
                         <button
                             onClick={() => setActiveTab('skills')}
-                            className={`px-4 py-2 rounded-md text-white ${activeTab === 'skills' ? 'bg-yellow-600' : 'bg-gray-600 hover:bg-gray-700'
+                            className={`px-4 py-2 rounded-md text-white ${activeTab === 'skills' ? 'bg-gradient-to-r from-blue-500 to-purple-600' : 'bg-gray-500 hover:bg-gray-600'
                                 }`}
                         >
                             Skills
                         </button>
                         <button
                             onClick={() => setActiveTab('Education')}
-                            className={`px-4 py-2 rounded-md text-white ${activeTab === 'Education' ? 'bg-yellow-600' : 'bg-gray-600 hover:bg-gray-700'
+                            className={`px-4 py-2 rounded-md text-white ${activeTab === 'Education' ? 'bg-gradient-to-r from-blue-500 to-purple-600' : 'bg-gray-500 hover:bg-gray-600'
                                 }`}
                         >
                             Education
                         </button>
-                        {/* <button
-                            onClick={() => setActiveTab('hobbies')}
-                            className={`px-4 py-2 rounded-md text-white ${activeTab === 'hobbies' ? 'bg-yellow-600' : 'bg-gray-600 hover:bg-gray-700'
-                                }`}
-                        >
-                            Hobbies
-                        </button> */}
+
                     </div>
                     <div className="text-gray-800  p-4 rounded-md shadow-md">
                         {data[activeTab]}
