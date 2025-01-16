@@ -36,6 +36,15 @@ export default function Hero() {
                 </p>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
+                {/* <div className="relative w-64 h-64 md:w-96 md:h-96">
+                    <Image
+                        src={img3}
+                        alt="Profile Picture"
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-full shadow-2xl border-[4px] border-blue-800"
+                    />
+                </div> */}
                 <div className="relative w-64 h-64 md:w-96 md:h-96">
                     <Image
                         src={img3}
