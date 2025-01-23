@@ -1,5 +1,6 @@
 import connectionDB from "@/lib/connection"
-import visiter from "@/model/schema"
+// import visiter from "@/model/schema"
+import visiter from "@/lib/schema"
 import { NextResponse } from "next/server"
 
 
