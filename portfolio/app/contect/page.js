@@ -1,4 +1,24 @@
+"use client"
+
+import { useState } from "react";
+
 export default function ContactUs() {
+    const [name, setname] = useState("")
+    const [email, setemail] = useState("")
+    const [message, setmessage] = useState("")
+    const messageHandeler = async () => {
+        if (!name || !email || !message) {
+            alert("All feilds are required")
+        }
+        else {
+            try {
+                const res = await fetch('http://localhost:3000/api/contact', { method: "POST", headers: { "Content-type": "application/json" }, body: JSON.stringify({ name, email, message }) })
+            } catch (error) {
+                console.log("Error in posting");
+
+            }
+        }
+    }
     return (
         <section className="relative bg-gradient-to-br from-[#9d9ea0] to-[#2e2edb54]  text-gray-800 md:mb-10 md:mx-2 rounded-xl shadow-lg py-20">
             <div className="container mx-auto px-5">
@@ -20,6 +40,8 @@ export default function ContactUs() {
                                     Name
                                 </label>
                                 <input
+                                    onChange={(e) => setname(e.target.value)}
+                                    value={name}
                                     type="text"
                                     id="name"
                                     name="name"
@@ -35,6 +57,8 @@ export default function ContactUs() {
                                     Email
                                 </label>
                                 <input
+                                    onChange={(e) => setemail(e.target.value)}
+                                    value={email}
                                     type="email"
                                     id="email"
                                     name="email"
@@ -50,6 +74,8 @@ export default function ContactUs() {
                                     Message
                                 </label>
                                 <textarea
+                                    onChange={(e) => setmessage(e.target.value)}
+                                    value={message}
                                     id="message"
                                     name="message"
                                     className="w-full bg-gradient-to-br from-yellow-100 to-orange-100 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 h-32 py-2 px-3 outline-none resize-none transition-all duration-200"
@@ -59,7 +85,7 @@ export default function ContactUs() {
 
 
                         <div className="p-2 w-full">
-                            <button className="flex mx-auto text-white bg-purple-600 border-0 py-2 px-8 focus:outline-none hover:bg-purple-700 rounded-lg text-lg transition-all duration-200">
+                            <button onClick={messageHandeler} className="flex mx-auto text-white bg-purple-600 border-0 py-2 px-8 focus:outline-none hover:bg-purple-700 rounded-lg text-lg transition-all duration-200">
                                 Send Message
                             </button>
                         </div>
