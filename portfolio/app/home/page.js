@@ -33,29 +33,19 @@ export default function Hero() {
                 </h2>
                 <p className="mt-4 lg:mt-6 text-lg font-semibold  text-gray-700">
                     I craft modern, responsive, and user-friendly web applications that deliver seamless digital experiences.
-                </p>
+                </p><div className=' mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 flex item-center justify-center'>
+
+                    <button className="px-6 py-3   text-lg font-semibold border-2 border-blue-500 text-blue-500 rounded-full transition-all duration-300 hover:bg-blue-500 hover:text-white">
+                        Click Me
+                    </button>
+                    <button class="relative px-6 py-3 text-lg font-semibold text-white rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg transition-all duration-300 hover:shadow-2xl hover:brightness-110">
+                        Glowing Button
+                    </button>
+
+                </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
 
-                {/* <div className="relative w-64 h-64 md:w-96 md:h-96">
-                    <Image
-                        src={img3}
-                        alt="Profile Picture"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-full shadow-2xl border-[4px] border-blue-800"
-                    />
-                </div> */}
-                {/* <div className="relative w-64 h-64 md:w-96 md:h-96">
-
-                    <Image
-                        src={img3}
-                        alt="Profile Picture"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-full shadow-2xl border-[4px] border-blue-800"
-                    />
-                </div> */}
                 <div className="relative w-64 h-64 md:w-96 md:h-96">
 
                     <div className="w-full h-full bg-white rounded-full">
