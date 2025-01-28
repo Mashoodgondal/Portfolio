@@ -18,7 +18,7 @@ const About = () => {
                 <li> Tailwind CSS</li>
                 <li>Firebase</li>
                 <li> MongoDB</li>
-                <li> Git</li>
+                <li> Git & GitHub</li>
 
             </ul>
         ),

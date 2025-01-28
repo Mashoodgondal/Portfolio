@@ -38,7 +38,7 @@ export default function Hero() {
                     <button className="px-6 py-3   text-lg font-semibold border-2 border-blue-500 text-blue-500 rounded-full transition-all duration-300 hover:bg-blue-500 hover:text-white">
                         Click Me
                     </button>
-                    <button class="relative px-6 py-3 text-lg font-semibold text-white rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg transition-all duration-300 hover:shadow-2xl hover:brightness-110">
+                    <button className="relative px-6 py-3 text-lg font-semibold text-white rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg transition-all duration-300 hover:shadow-2xl hover:brightness-110">
                         Glowing Button
                     </button>
 
@@ -58,6 +58,8 @@ export default function Hero() {
                         />
 
                     </div>
+
+
                 </div>
 
 
