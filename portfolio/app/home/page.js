@@ -64,13 +64,12 @@ export default function Hero() {
 
 
             </div> */}
-            <div className="relative w-64 h-64 md:w-96 md:h-96">
+            <div className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
+                {/* Outer Animated Border */}
+                <div className="absolute inset-0 rounded-full p-[5px] bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 animate-border-glow"></div>
 
-                {/* Animated Gradient Border */}
-                <div className="absolute inset-0 rounded-full p-1 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 animate-border-glow"></div>
-
-                {/* Image Container */}
-                <div className="w-full h-full bg-white rounded-full overflow-hidden">
+                {/* Inner White Circle to Hold Image */}
+                <div className="relative w-full h-full bg-white rounded-full overflow-hidden flex items-center justify-center">
                     <Image
                         src={img3}
                         alt="Profile Picture"
