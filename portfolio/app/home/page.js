@@ -44,7 +44,7 @@ export default function Hero() {
 
                 </div>
             </div>
-            <div className="w-full md:w-1/2 flex justify-center">
+            {/* <div className="w-full md:w-1/2 flex justify-center">
 
                 <div className="relative w-64 h-64 md:w-96 md:h-96">
 
@@ -63,6 +63,22 @@ export default function Hero() {
                 </div>
 
 
+            </div> */}
+            <div className="relative w-64 h-64 md:w-96 md:h-96">
+
+                {/* Animated Gradient Border */}
+                <div className="absolute inset-0 rounded-full p-1 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 animate-border-glow"></div>
+
+                {/* Image Container */}
+                <div className="w-full h-full bg-white rounded-full overflow-hidden">
+                    <Image
+                        src={img3}
+                        alt="Profile Picture"
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-full shadow-2xl"
+                    />
+                </div>
             </div>
 
         </div>
