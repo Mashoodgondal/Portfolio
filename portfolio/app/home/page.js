@@ -12,7 +12,7 @@ export default function Hero() {
 
             <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
                 <h1 className="text-4xl md:text-6xl font-bold text-indigo-600 animate-bounce-in delay-100">
-                    {/* Fixed width and height for Typewriter container */}
+
                     <div className="inline-block w-[350px] h-[80px] md:w-[500px] md:h-[110px] overflow-hidden">
                         <Typewriter
                             options={{
@@ -51,7 +51,7 @@ export default function Hero() {
             </div>
 
 
-            {/* Profile Image Section */}
+
             <div className="w-full md:w-1/2 flex justify-center">
                 <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl transition-transform duration-500 hover:rotate-12">
                     <Image

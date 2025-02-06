@@ -1,10 +1,11 @@
 import React from 'react'
-import AnimatedCard from '../(components)/projectCards/page'
+
+import ProjectsCard from '../(components)/projectCards/page'
 
 const Projects = () => {
     return (
-        <div>Projects
-            <AnimatedCard />
+        <div className='p-4 '>
+            <ProjectsCard />
         </div>
     )
 }
