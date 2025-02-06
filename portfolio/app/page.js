@@ -5,6 +5,7 @@ import About from "./about/page";
 import ContactUs from "./contect/page";
 // import Contect from "./contect/page"
 import Hero from "./home/page";
+import Projects from "./projects/page";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       {/* <Hero /> */}
       <Hero />
       <About />
+      <Projects />
       <ContactUs />
     </>
   );
