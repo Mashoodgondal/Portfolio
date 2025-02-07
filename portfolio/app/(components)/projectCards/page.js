@@ -1,7 +1,7 @@
 
 export default function ProjectsCard() {
     return (
-        <div className="max-w-sm mx-auto mt-10 shadow-md hover:shadow-purple-900 hover:shadow-2xl transition-shadow duration-500 group">
+        <div className=" shadow-md hover:shadow-purple-900 hover:shadow-2xl transition-shadow duration-500 group">
             <div className="relative group rounded-xl overflow-hidden shadow-lg">
 
                 <img
@@ -23,16 +23,16 @@ export default function ProjectsCard() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
                             </svg>
                         </button>
-                        <button className="bg-white p-3 rounded-full shadow-lg hover:bg-green-500 hover:text-white transition-colors duration-300">
+                        {/* <button className="bg-white p-3 rounded-full shadow-lg hover:bg-green-500 hover:text-white transition-colors duration-300">
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h11M9 21V3"></path>
                             </svg>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
 
                 <div className="bg-white py-4 text-center">
-                    <h2 className="text-xl font-bold text-gray-800">Beautiful Scenery</h2>
+                    <h2 className="text-lg font-bold text-gray-700">Beautiful Scenery</h2>
                 </div>
             </div>
         </div>
