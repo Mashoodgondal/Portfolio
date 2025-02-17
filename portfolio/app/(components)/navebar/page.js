@@ -3,7 +3,7 @@ import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { RiCloseCircleFill } from "react-icons/ri";
 
-import Link from "next/link";
+// import Link from "next/link";
 
 const NaveBar = () => {
     const [nav, setnav] = useState(false);
@@ -15,9 +15,9 @@ const NaveBar = () => {
             <nav className=" sticky  shadow-sm ">
                 <div className="max-w-screen-xl flex justify-between px-4 py-3 mx-auto">
                     <div>
-                        <a href="#" className="text-yellow-600 text-3xl font-bold">
-                            Port<span className="text-indigo-600">folio</span>
-                            <span className="text-yellow-600 text-4xl">.</span>
+                        <a href="#" className="text-indigo-600 text-3xl font-bold">
+                            Mashood<span className="text-yellow-600">Ali</span>
+                            <span className="text-indigo-600 text-4xl">.</span>
                         </a>
                     </div>
 
