@@ -1,11 +1,11 @@
 
-export default function ProjectsCard() {
+export default function ProjectsCard(proops) {
     return (
         <div className="shadow-md hover:shadow-purple-900 hover:shadow-2xl transition-shadow duration-500 group transform hover:rotate-x-6 hover:rotate-y-6 hover:duration-300">
             <div className="relative group rounded-xl overflow-hidden shadow-lg">
 
                 <img
-                    src="https://via.placeholder.com/400"
+                    src={proops.img}
                     alt="Sample Image"
                     className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-50"
                 />
@@ -26,7 +26,7 @@ export default function ProjectsCard() {
                 </div>
 
                 <div className="bg-indigo-400 py-4 text-center">
-                    <h2 className="text-lg font-bold text-gray-700">Beautiful Scenery</h2>
+                    <h2 className="text-lg font-bold text-gray-700">{proops.title}</h2>
                 </div>
             </div>
         </div>

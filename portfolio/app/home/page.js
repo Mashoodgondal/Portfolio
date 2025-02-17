@@ -49,9 +49,6 @@ export default function Hero() {
                 </div>
 
             </div>
-
-
-
             <div className="w-full md:w-1/2 flex justify-center">
                 <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl transition-transform duration-500 hover:rotate-12 border-4 border-gradient-to-r from-purple-500 to-indigo-900 animate-pulse-glow">
                     <Image
