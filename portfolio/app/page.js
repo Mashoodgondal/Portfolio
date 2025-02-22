@@ -2,7 +2,7 @@
 // import Hero from "./home/page";
 
 import About from "./about/page";
-import ContactUs from "./contect/page";
+import ContactUs from "./contact/page";
 // import Contect from "./contect/page"
 import Hero from "./home/page";
 import Projects from "./projects/page";

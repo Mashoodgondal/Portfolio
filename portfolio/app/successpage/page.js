@@ -4,24 +4,44 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Confetti from "react-confetti";
-import { useWindowSize } from "react-use";
 import Link from "next/link";
 
 export default function SuccessPage() {
     const router = useRouter();
-    const { width, height } = useWindowSize();
     const [showConfetti, setShowConfetti] = useState(true);
+    const [confettiPieces, setConfettiPieces] = useState([]);
 
+    // ✅ Run only on client (Avoid SSR issues)
     useEffect(() => {
-        setTimeout(() => setShowConfetti(false), 3000); // Stop confetti after 3 seconds
+        setTimeout(() => setShowConfetti(false), 3000);
+
+        // ✅ Generate confetti positions only on client
+        const newConfetti = Array.from({ length: 50 }).map(() => ({
+            left: `${Math.random() * window.innerWidth}px`,
+            delay: `${Math.random() * 2}s`,
+            color: ["#ff0", "#f00", "#0f0", "#00f", "#ff8000"][Math.floor(Math.random() * 5)]
+        }));
+
+        setConfettiPieces(newConfetti);
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-400 to-blue-500 text-white p-6">
-            {showConfetti && <Confetti width={width} height={height} />}
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-400 to-blue-500 text-white p-6 relative overflow-hidden">
 
-            {/* ✅ Success Animation */}
+            {/* ✅ Custom Confetti Animation (Client-Side Only) */}
+            {showConfetti && (
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    {confettiPieces.map((confetti, i) => (
+                        <div
+                            key={i}
+                            className="confetti"
+                            style={{ left: confetti.left, animationDelay: confetti.delay, backgroundColor: confetti.color }}
+                        />
+                    ))}
+                </div>
+            )}
+
+            {/* ✅ Success Message */}
             <div className="bg-white p-6 rounded-2xl shadow-xl text-center w-full max-w-lg animate-fade-in">
                 <div className="flex justify-center">
                     {/* Animated Success Icon */}
@@ -44,13 +64,47 @@ export default function SuccessPage() {
                             Go Back Home
                         </button>
                     </Link>
-                    <Link href="/contact">
+                    <Link href="/">
                         <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200">
                             Submit Another Message
                         </button>
                     </Link>
                 </div>
             </div>
+
+            {/* ✅ Confetti CSS */}
+            <style jsx>{`
+                .confetti {
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    opacity: 0.7;
+                    animation: confetti-fall 3s linear infinite;
+                }
+
+                @keyframes confetti-fall {
+                    0% { transform: translateY(-10vh) rotate(0deg); }
+                    100% { transform: translateY(100vh) rotate(360deg); }
+                }
+
+                .animate-fade-in {
+                    animation: fade-in 0.8s ease-out;
+                }
+
+                @keyframes fade-in {
+                    from { opacity: 0; transform: scale(0.9); }
+                    to { opacity: 1; transform: scale(1); }
+                }
+
+                .animate-slide-in {
+                    animation: slide-in 0.8s ease-out;
+                }
+
+                @keyframes slide-in {
+                    from { opacity: 0; transform: translateY(-20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+            `}</style>
         </div>
     );
 }
