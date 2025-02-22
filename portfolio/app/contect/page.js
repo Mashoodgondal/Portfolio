@@ -1,18 +1,27 @@
 "use client"
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactUs() {
+    const router = useRouter();
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [message, setmessage] = useState("")
     const messageHandeler = async () => {
         if (!name || !email || !message) {
             alert("All feilds are required")
+            return;
         }
         else {
             try {
                 const res = await fetch('http://localhost:3000/api/contact', { method: "POST", headers: { "Content-type": "application/json" }, body: JSON.stringify({ name, email, message }) })
+                if (res.ok) {
+                    router.push("/successpage");
+                } else {
+                    alert("Failed to submit form, please try again.");
+                }
+
             } catch (error) {
                 console.log("Error in posting");
 
@@ -36,7 +45,7 @@ export default function ContactUs() {
 
                         <div className="p-2 w-1/2">
                             <div className="relative">
-                                <label htmlFor="name" className="leading-7 text-blue-700 text-sm ">
+                                <label htmlFor="name" className="leading-7 text-blue-700 font-bold text-sm ">
                                     Name
                                 </label>
                                 <input
@@ -45,7 +54,7 @@ export default function ContactUs() {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    className="w-full bg-gradient-to-br from-yellow-100 to-orange-100 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
+                                    className="w-full bg-gradient-to-br from-yellow-300 to-orange-200 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
                                 />
                             </div>
                         </div>
@@ -62,7 +71,7 @@ export default function ContactUs() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="w-full bg-gradient-to-br from-yellow-100 to-orange-100 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
+                                    className="w-full bg-gradient-to-br from-yellow-300 to-orange-200 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
                                 />
                             </div>
                         </div>
@@ -70,7 +79,7 @@ export default function ContactUs() {
 
                         <div className="p-2 w-full">
                             <div className="relative">
-                                <label htmlFor="message" className="leading-7 text-blue-700 text-sm ">
+                                <label htmlFor="message" className="leading-7 text-blue-700 font-bold text-sm ">
                                     Message
                                 </label>
                                 <textarea
@@ -78,16 +87,18 @@ export default function ContactUs() {
                                     value={message}
                                     id="message"
                                     name="message"
-                                    className="w-full bg-gradient-to-br from-yellow-100 to-orange-100 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 h-32 py-2 px-3 outline-none resize-none transition-all duration-200"
+                                    className="w-full bg-gradient-to-br from-yellow-200 to-orange-200 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 h-32 py-2 px-3 outline-none resize-none transition-all duration-200"
                                 ></textarea>
                             </div>
                         </div>
 
 
                         <div className="p-2 w-full">
+
                             <button onClick={messageHandeler} className="flex mx-auto text-white bg-purple-600 border-0 py-2 px-8 focus:outline-none hover:bg-purple-700 rounded-lg text-lg transition-all duration-200">
                                 Send Message
                             </button>
+
                         </div>
 
 
