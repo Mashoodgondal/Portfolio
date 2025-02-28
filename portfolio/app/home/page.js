@@ -5,27 +5,19 @@
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
 import img3 from '@/public/images/in2.jpg';
-// import resume from '@/public/images/about2.jpg'
+
 
 export default function Hero() {
     const handleDownload = () => {
-        const pdfUrl = "/images/my-resume.pdf"; // File must be in /public folder
+        const pdfUrl = "/images/my-resume.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
-        link.download = "mashood_Ali.pdf"; // Renames the file when downloaded
+        link.download = "mashood_Ali.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     };
-    // const handleDownload = () => {
-    //     const imageUrl = "/images/about2.jpg"; // Correct path for public folder
-    //     const link = document.createElement("a");
-    //     link.href = imageUrl;
-    //     link.download = "My_Resume.jpg"; // This will name the downloaded file
-    //     document.body.appendChild(link);
-    //     link.click();
-    //     document.body.removeChild(link);
-    // };
+
     return (
         <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-4 lg:p-10 animate-bounce-in">
 
