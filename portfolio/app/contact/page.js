@@ -14,14 +14,9 @@ export default function ContactUs() {
             return;
         }
         else {
+            router.push("/successpage");
             try {
                 const res = await fetch('http://localhost:3000/api/contact', { method: "POST", headers: { "Content-type": "application/json" }, body: JSON.stringify({ name, email, message }) })
-                if (res.ok) {
-                    router.push("/successpage");
-                } else {
-                    alert("Failed to submit form, please try again.");
-                }
-
             } catch (error) {
                 console.log("Error in posting");
 

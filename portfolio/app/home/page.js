@@ -5,8 +5,27 @@
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
 import img3 from '@/public/images/in2.jpg';
+// import resume from '@/public/images/about2.jpg'
 
 export default function Hero() {
+    const handleDownload = () => {
+        const pdfUrl = "/images/my-resume.pdf"; // File must be in /public folder
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "mashood_Ali.pdf"; // Renames the file when downloaded
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+    // const handleDownload = () => {
+    //     const imageUrl = "/images/about2.jpg"; // Correct path for public folder
+    //     const link = document.createElement("a");
+    //     link.href = imageUrl;
+    //     link.download = "My_Resume.jpg"; // This will name the downloaded file
+    //     document.body.appendChild(link);
+    //     link.click();
+    //     document.body.removeChild(link);
+    // };
     return (
         <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-4 lg:p-10 animate-bounce-in">
 
@@ -43,7 +62,7 @@ export default function Hero() {
                     <button className="w-1/2  md:w-full mx-auto px-6 py-3 text-lg font-semibold border-2 border-blue-500 text-blue-500 rounded-full transition-all duration-300 hover:bg-blue-500 hover:text-white animate-pulse-glow">
                         Click Me
                     </button>
-                    <button className="w-1/2 md:w-full mx-auto relative px-6 py-3 text-lg font-semibold text-white rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 animate-pulse-glow delay-200">
+                    <button onClick={handleDownload} className="w-1/2 md:w-full mx-auto relative px-6 py-3 text-lg font-semibold text-white rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 animate-pulse-glow delay-200">
                         Download CV
                     </button>
                 </div>

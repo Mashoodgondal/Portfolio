@@ -11,11 +11,11 @@ export default function SuccessPage() {
     const [showConfetti, setShowConfetti] = useState(true);
     const [confettiPieces, setConfettiPieces] = useState([]);
 
-    // ✅ Run only on client (Avoid SSR issues)
+
     useEffect(() => {
         setTimeout(() => setShowConfetti(false), 3000);
 
-        // ✅ Generate confetti positions only on client
+
         const newConfetti = Array.from({ length: 50 }).map(() => ({
             left: `${Math.random() * window.innerWidth}px`,
             delay: `${Math.random() * 2}s`,
@@ -28,7 +28,7 @@ export default function SuccessPage() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-400 to-blue-500 text-white p-6 relative overflow-hidden">
 
-            {/* ✅ Custom Confetti Animation (Client-Side Only) */}
+
             {showConfetti && (
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     {confettiPieces.map((confetti, i) => (
@@ -41,10 +41,10 @@ export default function SuccessPage() {
                 </div>
             )}
 
-            {/* ✅ Success Message */}
+
             <div className="bg-white p-6 rounded-2xl shadow-xl text-center w-full max-w-lg animate-fade-in">
                 <div className="flex justify-center">
-                    {/* Animated Success Icon */}
+
                     <div className="w-24 h-24 bg-green-500 text-white flex items-center justify-center rounded-full text-5xl shadow-lg">
                         ✅
                     </div>
@@ -57,7 +57,7 @@ export default function SuccessPage() {
                     Thank you for reaching out! We'll get back to you soon.
                 </p>
 
-                {/* ✅ Buttons */}
+
                 <div className="mt-6 flex flex-col md:flex-row gap-4">
                     <Link href="/">
                         <button className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-200">
@@ -72,7 +72,7 @@ export default function SuccessPage() {
                 </div>
             </div>
 
-            {/* ✅ Confetti CSS */}
+
             <style jsx>{`
                 .confetti {
                     position: absolute;
