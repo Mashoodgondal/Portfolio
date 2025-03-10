@@ -3,7 +3,7 @@
 @tailwind utilities;
 /* styles/globals.css */
 body {
-  background: linear-gradient(to right, #2e2edb54, #9d9ea0); /* Gradient Background */
+  background: linear-gradient(to right, #f3f3f5be, #cfd1d4); /* Gradient Background */
   background-size: cover;
   background-attachment: fixed; /* Keeps the background fixed while scrolling */
   margin: 0;
