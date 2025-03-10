@@ -1,7 +1,7 @@
 
 export default function ProjectsCard(proops) {
     return (
-        <div className="shadow-md hover:shadow-purple-900 hover:shadow-2xl transition-shadow duration-500 group transform hover:rotate-x-6 hover:rotate-y-6 hover:duration-300">
+        <div className="shadow-md hover:shadow-purple-900 hover:shadow-md transition-shadow duration-500 group transform hover:rotate-x-6 hover:rotate-y-6 hover:duration-300">
             <div className="relative group rounded-xl overflow-hidden shadow-lg">
 
                 <img

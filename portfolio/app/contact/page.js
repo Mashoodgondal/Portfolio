@@ -24,10 +24,10 @@ export default function ContactUs() {
         }
     }
     return (
-        <section className="relative bg-gradient-to-br from-[#9d9ea0] to-[#2e2edb54]  text-gray-800 md:mb-10 md:mx-2 rounded-xl shadow-lg py-20">
+        <section className="relative bg-transparent  text-gray-800 md:mb-10 md:mx-2 rounded-xl shadow-lg py-20">
             <div className="container mx-auto px-5">
                 <div className="flex flex-col text-center w-full mb-12">
-                    <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-purple-700">
+                    <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-indigo-500">
                         Get in Touch
                     </h1>
                     <p className="lg:w-2/3 mx-auto leading-relaxed text-lg">
@@ -49,7 +49,7 @@ export default function ContactUs() {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    className="w-full bg-gradient-to-br from-yellow-300 to-orange-200 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
+                                    className="w-full bg-gray-100 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
                                 />
                             </div>
                         </div>
@@ -66,7 +66,7 @@ export default function ContactUs() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="w-full bg-gradient-to-br from-yellow-300 to-orange-200 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
+                                    className="w-full bg-gray-100 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 py-2 px-3 outline-none transition-all duration-200"
                                 />
                             </div>
                         </div>
@@ -82,7 +82,7 @@ export default function ContactUs() {
                                     value={message}
                                     id="message"
                                     name="message"
-                                    className="w-full bg-gradient-to-br from-yellow-200 to-orange-200 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 h-32 py-2 px-3 outline-none resize-none transition-all duration-200"
+                                    className="w-full bg-100 to-orange-200 text-gray-900 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 h-32 py-2 px-3 outline-none resize-none transition-all duration-200"
                                 ></textarea>
                             </div>
                         </div>
@@ -90,7 +90,7 @@ export default function ContactUs() {
 
                         <div className="p-2 w-full">
 
-                            <button onClick={messageHandeler} className="flex mx-auto text-white bg-purple-600 border-0 py-2 px-8 focus:outline-none hover:bg-purple-700 rounded-lg text-lg transition-all duration-200">
+                            <button onClick={messageHandeler} className="flex mx-auto text-white bg-indigo-400 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-500 rounded-lg text-lg transition-all duration-200">
                                 Send Message
                             </button>
 
