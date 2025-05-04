@@ -19,7 +19,7 @@ export default function Hero() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-4 lg:p-10 animate-bounce-in">
+        <div id='home' className="flex flex-col md:flex-row items-center justify-center min-h-screen p-4 lg:p-10 animate-bounce-in">
 
             <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
                 <h1 className="text-4xl md:text-6xl font-bold text-indigo-600 animate-bounce-in delay-100">
@@ -71,8 +71,8 @@ export default function Hero() {
                     />
                 </div>
             </div>
-            {/* <hr className='h-2 bg-black' /> */}
-            <hr></hr>
+
+
         </div>
     );
 }

@@ -24,7 +24,7 @@ export default function ContactUs() {
         }
     }
     return (
-        <section className="relative bg-transparent  text-gray-800 md:mb-10 md:mx-2 rounded-xl shadow-lg py-20">
+        <section id="contact" className="relative bg-transparent  text-gray-800 md:mb-10 md:mx-2 rounded-xl shadow-lg py-20">
             <div className="container mx-auto px-5">
                 <div className="flex flex-col text-center w-full mb-12">
                     <h1 className="sm:text-4xl text-3xl font-bold title-font mb-4 text-indigo-500">

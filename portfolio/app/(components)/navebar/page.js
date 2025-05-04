@@ -11,8 +11,8 @@ const NaveBar = () => {
         setnav(!nav);
     };
     return (
-        <div>
-            <nav className=" sticky  shadow-sm ">
+        <div >
+            <nav className="  sticky  shadow-sm ">
                 <div className="max-w-screen-xl flex justify-between px-4 py-3 mx-auto">
                     <div>
                         <a href="#" className="text-indigo-600 text-3xl font-bold">
@@ -25,7 +25,7 @@ const NaveBar = () => {
                         <ul className=" hidden md:flex flex-row font-bold mt-0 space-x-12 rtl:space-x-reverse text-sm">
                             <li>
                                 <a
-                                    href="/"
+                                    href="home"
                                     className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                     aria-current="page"
                                 >
@@ -34,7 +34,7 @@ const NaveBar = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/"
+                                    href="about"
                                     className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                 >
                                     ABOUT
@@ -42,7 +42,7 @@ const NaveBar = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/"
+                                    href="projects"
                                     className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                 >
                                     PROJECTS
@@ -50,7 +50,7 @@ const NaveBar = () => {
                             </li>
                             <li>
                                 <a
-                                    href="/"
+                                    href="contact"
                                     className="text-indigo-600 hover:text-yellow-500 hover:border-b hover:border-yellow-500"
                                 >
                                     Contect

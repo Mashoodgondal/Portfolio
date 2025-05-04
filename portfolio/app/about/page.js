@@ -33,7 +33,7 @@ const About = () => {
     };
 
     return (
-        <div className={`flex items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-4 p-4 lg:p-20 transition-opacity duration-1000 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
+        <div id='about' className={`items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-4 p-4 lg:p-20 transition-opacity duration-1000 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
 
             <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] mx-auto transform hover:scale-105 transition-transform duration-500">
                 <Image
