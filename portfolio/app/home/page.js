@@ -54,14 +54,14 @@ export default function Hero() {
                     <button className="w-1/2  md:w-full mx-auto px-6 py-3 text-lg font-semibold border-2 border-blue-500 text-blue-500 rounded-full transition-all duration-300 hover:bg-blue-500 hover:text-white animate-pulse-glow">
                         Click Me
                     </button>
-                    <button onClick={handleDownload} className="w-1/2 md:w-full mx-auto relative px-6 py-3 text-lg font-semibold text-white rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 animate-pulse-glow delay-200">
+                    <button onClick={handleDownload} className="w-1/2 md:w-full mx-auto relative px-6 py-3 text-lg font-semibold text-white rounded-full bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg transition-all duration-300 hover:shadow-lg hover:scale-110 animate-pulse-glow delay-200">
                         Download CV
                     </button>
                 </div>
 
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-                <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl transition-transform duration-500 hover:rotate-12 border-4 border-gradient-to-r from-purple-500 to-indigo-900 animate-pulse-glow">
+                <div className="relative w-64 h-64 md:w-64 md:h-64 rounded-lg overflow-hidden shadow-xl transition-transform duration-500 hover:rotate-12 border-4 border-gradient-to-r from-purple-500 to-indigo-900 animate-pulse-glow">
                     <Image
                         src={img3}
                         alt="Profile Picture"
@@ -71,6 +71,8 @@ export default function Hero() {
                     />
                 </div>
             </div>
+            {/* <hr className='h-2 bg-black' /> */}
+            <hr></hr>
         </div>
     );
 }
