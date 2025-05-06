@@ -1,11 +1,13 @@
-
+import Image from "next/image";
 export default function ProjectsCard(proops) {
     return (
         <div className="shadow-md hover:shadow-purple-900 hover:shadow-md transition-shadow duration-500 group transform hover:rotate-x-6 hover:rotate-y-6 hover:duration-300">
             <div className="relative group rounded-xl overflow-hidden shadow-lg">
 
-                <img
+                <Image
                     src={proops.img}
+                    width={300}
+                    height={300}
                     alt="Sample Image"
                     className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-50"
                 />
